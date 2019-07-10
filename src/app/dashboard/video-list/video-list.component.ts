@@ -8,10 +8,15 @@ import { Video } from "../../../types";
 })
 export class VideoListComponent implements OnInit {
   videoList: Video[] = rawVideoListData;
+  selectedVideo: Video;
 
   constructor() {}
 
   ngOnInit() {}
+
+  setSelectedVideo(video: Video) {
+    this.selectedVideo = video;
+  }
 }
 
 const rawVideoListData: Video[] = [
